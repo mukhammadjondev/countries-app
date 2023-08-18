@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Where in the world?</h1>
+            <button class="btn" id="mode-btn">
+                <i class="fa-regular fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </header>
+    <section>
+        <div class="container main-container">
+            <div class="filter">
+                <form>
+                    <input type="search" placeholder="Search for a country…" id="search" required autocomplete="off">
+                </form>
+                <select>
+                    <option value="all">All</option>
+                    <option value="africa">Africa</option>
+                    <option value="america">America</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+            <div class="countries-contianer"></div>
+        </div>
+    </section>
+
+    <!-- Loader -->
+    <div class="loader hidden">
+        <div class="sp sp-wave"></div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

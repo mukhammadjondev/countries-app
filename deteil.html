@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>Where in the world?</h1>
+            <button class="btn" id="mode-btn">
+                <i class="fa-regular fa-moon"></i>
+                <span>Dark Mode</span>
+                <a href="deteil.html"></a>
+            </button>
+        </div>
+    </header>
+    <section>
+        <div class="container main-container">
+           <a class="btn btn-back" href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>Back
+           </a>
+           <div class="wrapper">
+                <img class="country-flags__img" src="" width="560" height="401" alt="country flags">
+                <div class="text-info__wrapper">
+                    <h2 class="country-name__title">...</h2>
+                    <div class="card-infolist__wrapper">
+                        <ul class="card-infolist">
+                            <li class="infolist-item">
+                                <span><b>Native Name: </b></span>
+                                <span class="native-name">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Population: </b></span>
+                                <span class="population">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Region: </b></span>
+                                <span class="region">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Sub Region: </b></span>
+                                <span class="sub-region">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Capital: </b></span>
+                                <span class="capital">...</span>
+                            </li>
+                        </ul>
+                        <ul class="card-infolist">
+                            <li class="infolist-item">
+                                <span><b>Top Level Domain: </b></span>
+                                <span class="top-level">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Currencies: </b></span>
+                                <span class="currencies">...</span>
+                            </li>
+                            <li class="infolist-item">
+                                <span><b>Languages: </b></span>
+                                <span class="languages">...</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="border-wrapper"></div>
+                </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Loader -->
+    <div class="loader hidden">
+        <div class="sp sp-wave"></div>
+    </div>
+
+    <script src="js/deteil.js"></script>
+</body>
+</html>
