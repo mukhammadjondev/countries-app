@@ -91,7 +91,6 @@ header {
   justify-content: space-between;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  background-color: var(--element-bg);
 }
 
 .header-container h1 {
@@ -130,7 +129,7 @@ select:focus,input:focus{
   padding-left: 4.1rem;
   margin-right: 20px;
   width: 480px;
-  background-image: url('/img/search-icon.svg');
+  background-image: url('./asset/search-icon.svg');
   background-repeat: no-repeat;
   background-size: 1rem;
   background-position: 2rem center;
@@ -278,7 +277,7 @@ select:focus,input:focus{
 	border-radius: 4px;
 	height: 125px;
 	margin-bottom: 10px;
-    z-index: 10;
+  z-index: 10;
 }
 
 .sp {
