@@ -5,7 +5,7 @@ const CountryCard = ({country}) => {
   const navigate = useNavigate()
 
   return (
-    <div className="card" data-set={region} key={name?.common} onClick={() => navigate(`/country-detail/${name.common}`)}>
+    <div className="card" key={name?.common} onClick={() => navigate(`/country-detail/${name.common}`)}>
       <img className="card-img" src={flags?.png} width="264" height="170" alt="country flags" />
       <div className="card-info">
         <h3 className="country-name">{name?.common}</h3>

@@ -20,6 +20,23 @@ const Main = () => {
     }
   }
 
+  const searchCountry = e => {
+    e.preventDefault()
+    countries.filter(country => {
+      if(country.name.common.toLowerCase().includes(e.target.value)) {
+        dispatch(getCountrySuccess([country]))
+      }
+    })
+  }
+
+  const handleSelect = (e) => {
+    countries.filter(country => {
+      if(country.region.includes(e.target.value)) {
+        dispatch(getCountrySuccess([country]))
+      }
+    })
+  }
+
   useEffect(() => {
     getCountries()
   }, [])
@@ -28,19 +45,19 @@ const Main = () => {
     <div className="container main-container">
       <div className="filter">
         <form>
-          <input type="search" placeholder="Search for a country…" id="search" required autoComplete="off" />
+          <input type="search" placeholder="Search for a country…" id="search" required autoComplete="off" onChange={searchCountry} />
         </form>
-        <select>
+        <select onChange={handleSelect}>
           {options.map(item => (
-            <option key={item.id} value={`${item.value.toLocaleLowerCase()}`}>{item.value}</option>
+            <option key={item.id} value={`${item.value}`}>{item.value}</option>
             ))}
         </select>
       </div>
       {isLoading && <Loader />}
       <div className="countries-contianer">
-        {countries.map(country => (
-          <CountryCard country={country} />
-        ))}
+          {countries.map(country => (
+            <CountryCard country={country} key={country.name.common} />
+          ))}
       </div>
     </div>
   </>
