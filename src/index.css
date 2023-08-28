@@ -199,7 +199,7 @@ select:focus,input:focus{
 }
 
 
-/* COUNTRY HTML */
+/* COUNTRY DETAIL */
 .main-container .btn-back {
   display: inline-block;
   background-color: var(--element-bg);
@@ -238,15 +238,19 @@ select:focus,input:focus{
   margin-bottom: 4.2rem;
 }
 
-.card-infolist__wrapper .card-infolist .infolist-item:not(:last-child) {
-  margin-bottom: 8px;
+.card-infolist__wrapper .card-infolist {
+  flex: 1;
 }
 
-.card-infolist__wrapper .card-infolist .infolist-item {
+.card-infolist li {
   list-style: none;
 }
 
-.border-wrapper .border-title {
+.card-infolist li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.border-title {
   display: inline-block;
   font-weight: bold;
   margin-right: 15px;
@@ -267,8 +271,7 @@ select:focus,input:focus{
   background-color: var(--element-bg);
 }
 
-
-.country-name__btn:not(:last-child) {
+.country-btn:not(:last-child) {
   margin-right: 1rem;
 }
 
