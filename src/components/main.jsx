@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useCallback, useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import CountryService from "../service/country"
 import { getCountryFailure, getCountryStart, getCountrySuccess } from "../slice/country"
@@ -10,7 +10,7 @@ const Main = () => {
   const {countries, isLoading} = useSelector(state => state.country)
   const dispatch = useDispatch()
 
-  const getCountries = async () => {
+  const getCountries = useCallback(async () => {
     dispatch(getCountryStart())
     try {
       const response = await CountryService.getAllCountry()
@@ -18,28 +18,20 @@ const Main = () => {
     } catch (error) {
       dispatch(getCountryFailure(error))
     }
-  }
+  }, [dispatch])
 
   const searchCountry = e => {
     e.preventDefault()
-    countries.filter(country => {
-      if(country.name.common.toLowerCase().includes(e.target.value)) {
-        dispatch(getCountrySuccess([country]))
-      }
-    })
+    countries.filter(country => country.name.common.toLowerCase().includes(e.target.value) && dispatch(getCountrySuccess([country])))
   }
 
   const handleSelect = (e) => {
-    countries.filter(country => {
-      if(country.region.includes(e.target.value)) {
-        dispatch(getCountrySuccess([country]))
-      }
-    })
+    countries.filter(country => country.region.includes(e.target.value) && dispatch(getCountrySuccess([country])))
   }
 
   useEffect(() => {
     getCountries()
-  }, [])
+  }, [getCountries])
 
   return <>
     <div className="container main-container">

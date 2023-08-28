@@ -318,6 +318,15 @@ select:focus,input:focus{
     display: none;
 }
 
+/* PAGE NOT FOUND */
+.page-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
 @-webkit-keyframes spWaveAf {
 	from { -webkit-transform: scale(0.5,0.5); opacity: 0; }
 	to { -webkit-transform: scale(1,1); opacity: 1; }
